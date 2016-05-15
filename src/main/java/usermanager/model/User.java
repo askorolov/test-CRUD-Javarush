@@ -26,7 +26,7 @@ public class User{
     }
 
     @Basic
-    @Column(name = "name", nullable = false, length = 25)
+    @Column(name = "name", nullable =false, length = 25)
     public String getName() {
         return name;
     }
@@ -46,7 +46,7 @@ public class User{
     }
 
     @Basic
-    @Column(name = "isAdmin")
+    @Column(name = "isAdmin", nullable = true)
     public boolean isAdmin() {
         return admin;
     }
@@ -56,7 +56,7 @@ public class User{
     }
 
     @Basic
-    @Column(name = "createdDate", nullable = false)
+    @Column(name="createdDate", insertable=false,updatable=false,nullable = false)
     public Timestamp getCreatedDate() {
         return createdDate;
     }

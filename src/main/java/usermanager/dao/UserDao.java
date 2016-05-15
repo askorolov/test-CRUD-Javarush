@@ -73,18 +73,11 @@ public class UserDao implements IUserDao {
     @Override
     public void addUser(User user) {
         Session session = this.sessionFactory.getCurrentSession();
-        user.setCreatedDate(new Timestamp(System.currentTimeMillis()));
         if(!user.getName().equals(""))
-        session.save(user);
+        session.saveOrUpdate(user);
         logger.info("User successfully saved. User details: " + user);
     }
 
-    @Override
-    public void updateUser(User user) {
-        Session session = this.sessionFactory.getCurrentSession();
-        if(!user.getName().equals(""))
-        session.update(user);
-        logger.info("User successfully updated. User details: " + user);
-    }
+
 
 }

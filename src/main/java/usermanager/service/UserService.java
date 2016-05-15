@@ -25,11 +25,7 @@ public class UserService implements IUserService {
         this.userDao.addUser(user);
     }
 
-    @Override
-    @Transactional
-    public void updateUser(User user) {
-        this.userDao.updateUser(user);
-    }
+
 
     @Override
     @Transactional

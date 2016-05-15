@@ -12,7 +12,7 @@ public interface IUserDao {
     PagedListHolder<User> listUsers(int page);
     List<User> getUsersByName(String userName);
     void addUser(User user);
-    void updateUser(User user);
+
 
 
 
