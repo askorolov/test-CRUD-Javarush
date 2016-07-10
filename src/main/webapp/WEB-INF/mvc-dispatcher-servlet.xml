@@ -43,16 +43,7 @@
         </property>
     </bean>
 
-
-    <bean id="userDao" class="usermanager.dao.UserDao">
-        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
-    </bean>
-
-    <bean id="userService" class="usermanager.service.UserService">
-        <property name="userDao" ref="userDao"/>
-    </bean>
-
-    <context:component-scan base-package="usermanager"/>
+    
 
     <tx:annotation-driven transaction-manager="transactionManager"/>
 
