@@ -14,7 +14,7 @@ public class User{
     private Timestamp createdDate;
 
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
 
     public int getId() {
@@ -56,7 +56,7 @@ public class User{
     }
 
     @Basic
-    @Column(name="createdDate", insertable=false,updatable=false,nullable = false)
+    @Column(name="registered", insertable=false,updatable=false,nullable = false)
     public Timestamp getCreatedDate() {
         return createdDate;
     }
